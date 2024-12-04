@@ -163,4 +163,18 @@
         </div>
     </footer>
 </body>
+<script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelector('.mobile-menu-btn').classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+            document.querySelector('.mobile-menu-btn').classList.remove('active');
+        });
+    });
+    </script
 </html>
